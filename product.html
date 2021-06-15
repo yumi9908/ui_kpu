@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./product.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <title>작품</title>
+
+  <script language="javascript">
+    $(function(){    
+    var $move_width = parseInt( $('.name_bar .content').css('width') );   
+    var $content_box = $('.name_bar .content_box');                       
+
+    function ani_1(){
+        animation()                         
+        setTimeout( ani_2, 1000 + 10 );     
+    };                                      
+    function ani_2(){
+        animation()
+        setTimeout( ani_1, 1000 + 10);     
+    };
+    ani_1();                                
+      
+
+    function animation(){
+        $content_box.children().first()
+        .animate({ marginLeft : - $move_width }, 2000, "linear", function (){
+            $(this).appendTo( $(this).parent() ).css({ marginLeft : 0});
+        });     
+    }
+    if(
+        $('.name_bar li').hover(function(){
+        $('.name_bar .content').stop();
+        $('.name_bar .content_box').stop();
+    
+    }) );
+});
+
+
+
+</script>
+
+<style>
+
+
+</style>
+
+</head>
+<body>
+
+  <div class="main_bar">
+    <div class="navi_bar">
+      <div class="logo">
+        <a href="./main_new2.html"><img src="https://i.postimg.cc/k5wy2fNP/Driving-mate-logo2-1.png" alt="" width="50"></a>
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a href="./index.html">전시소개</a></li>
+          <li><a href="./designer.html">졸업생</a></li>
+          <li><a href="./product.html">작품</a></li>
+        </ul>
+      </div>
+    </div>
+  
+    <div class="name_bar">
+      <ul class="content_box">
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="designers">
+    <div class="search_name">
+      <ul>
+        <li><a href="product2.html">산업디자인공학부</a></li>
+        <li><a href="product3.html">미디어디자인공학부</a></li>
+        <!-- <li><a href="#">ㅂㅅㅇㅈ</a></li>
+        <li><a href="#">ㅊㅋㅌㅍㅎ</a></li> -->
+      </ul>
+    </div>
+
+    <div class="designers_profile">
+      <a href="./detail_01.html">
+        <div id="profile">
+          <div class="profile_img">
+            <img src="https://i.postimg.cc/0yRrdgsQ/20210615-014846.png" alt="">
+          </div>
+          <div class="profile_namebox">
+            <p class="profile_name">신영준</p>
+          </div>
+        </div>
+      </a>
+      
+      <a href="./detail_02.html">
+        <div id="profile">
+          <div class="profile_img">
+            <img src="https://i.postimg.cc/FzTgLJg9/24cba107fa8d6efcd6f278c00d7e1050.jpg" alt="">
+          </div>
+          <div class="profile_namebox">
+            <p class="profile_name">전유미</p>
+          </div>
+        </div>
+      </a>
+      
+      <a href="./detail_01.html">
+        <div id="profile">
+          <div class="profile_img">
+            <img src="https://i.postimg.cc/8k4b3q8q/f7f6bd5533d35679d63b5fa125ee5f18.jpg" alt="">
+          </div>
+          <div class="profile_namebox">
+            <p class="profile_name">김하림</p>
+          </div>
+        </div>
+      </a>
+      
+      <a href="./detail_02.html">
+        <div id="profile">
+          <div class="profile_img">
+            <img src="https://i.postimg.cc/rphr9hjP/20210615-014907.png" alt="">
+          </div>
+          <div class="profile_namebox">
+            <p class="profile_name">마성진</p>
+          </div>
+        </div>
+      </a>
+      
+      <a href="./detail_02.html">
+        <div id="profile">
+          <div class="profile_img">
+            <img src="https://i.postimg.cc/8k4b3q8q/f7f6bd5533d35679d63b5fa125ee5f18.jpg" alt="">
+          </div>
+          <div class="profile_namebox">
+            <p class="profile_name">이민행</p>
+          </div>
+        </div>
+      </a>
+      
+      <a href="./detail_01.html">
+        <div id="profile">
+          <div class="profile_img">
+            <img src="https://i.postimg.cc/NjHJSHSD/20210615-015035.png" alt="">
+          </div>
+          <div class="profile_namebox">
+            <p class="profile_name">이승은</p>
+          </div>
+        </div>
+      </a>
+      
+      <a href="./detail_01.html">
+        <div id="profile">
+          <div class="profile_img">
+            <img src="https://i.postimg.cc/RFyJkNj1/20210615-014917.png" alt="">
+          </div>
+          <div class="profile_namebox">
+            <p class="profile_name">신영준</p>
+          </div>
+        </div>
+      </a>
+      
+      <a href="./detail_02.html">
+        <div id="profile">
+          <div class="profile_img">
+            <img src="https://i.postimg.cc/bJjK3Tv1/20210615-015023.png" alt="">
+          </div>
+          <div class="profile_namebox">
+            <p class="profile_name">전유미</p>
+          </div>
+        </div>
+      </a>
+      
+      <a href="./detail_01.html">
+        <div id="profile">
+          <div class="profile_img">
+            <img src="https://i.postimg.cc/xTJqVzJL/16234b68909ee00eced7d9f977c6ffa8.jpg" alt="">
+          </div>
+          <div class="profile_namebox">
+            <p class="profile_name">김하림</p>
+          </div>
+        </div>
+      </a>
+      
+      <a href="./detail_02.html">
+        <div id="profile">
+          <div class="profile_img">
+            <img src="https://i.postimg.cc/v8SDKzBQ/3235b51468732bed4191df9dd2a0093a.jpg" alt="">
+          </div>
+          <div class="profile_namebox">
+            <p class="profile_name">마성진</p>
+          </div>
+        </div>
+      </a>
+      
+      <a href="./detail_02.html">
+        <div id="profile">
+          <div class="profile_img">
+            <img src="https://i.postimg.cc/VkksFzhz/20210615-015000.png" alt="">
+          </div>
+          <div class="profile_namebox">
+            <p class="profile_name">이민행</p>
+          </div>
+        </div>
+      </a>
+      
+      <a href="./detail_01.html">
+        <div id="profile">
+          <div class="profile_img">
+            <img src="https://i.postimg.cc/MHt2cQqV/20210615-015008.png" alt="">
+          </div>
+          <div class="profile_namebox">
+            <p class="profile_name">이승은</p>
+          </div>
+        </div>
+      </a>
+      
+      <a href="./detail_01.html">
+        <div id="profile">
+          <div class="profile_img">
+            <img src="https://i.postimg.cc/T3PxX8HF/20c61c74386cf40e7eff55e30a943cc5.jpg" alt="">
+          </div>
+          <div class="profile_namebox">
+            <p class="profile_name">신영준</p>
+          </div>
+        </div>
+      </a>
+      
+      <a href="./detail_02.html">
+        <div id="profile">
+          <div class="profile_img">
+            <img src="https://i.postimg.cc/fTGyzRmp/ea6a38a0b21d4af518af07f7f8730034.jpg" alt="">
+          </div>
+          <div class="profile_namebox">
+            <p class="profile_name">전유미</p>
+          </div>
+        </div>
+      </a>
+      
+      <a href="./detail_01.html">
+        <div id="profile">
+          <div class="profile_img">
+            <img src="https://i.postimg.cc/d3ctRdbf/20210615-014951.png" alt="">
+          </div>
+          <div class="profile_namebox">
+            <p class="profile_name">김하림</p>
+          </div>
+        </div>
+      </a>
+      
+    </div>
+  </div>
+
+
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./designer.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <title>designer</title>
+
+  <script language="javascript">
+    $(function(){    
+    var $move_width = parseInt( $('.name_bar .content').css('width') );   
+    var $content_box = $('.name_bar .content_box');                       
+
+    function ani_1(){
+        animation()                         
+        setTimeout( ani_2, 1000 + 10 );     
+    };                                      
+    function ani_2(){
+        animation()
+        setTimeout( ani_1, 1000 + 10);     
+    };
+    ani_1();                                
+      
+
+    function animation(){
+        $content_box.children().first()
+        .animate({ marginLeft : - $move_width }, 2000, "linear", function (){
+            $(this).appendTo( $(this).parent() ).css({ marginLeft : 0});
+        });     
+    }
+    if(
+        $('.name_bar li').hover(function(){
+        $('.name_bar .content').stop();
+        $('.name_bar .content_box').stop();
+    
+    }) );
+});
+
+
+
+</script>
+
+<style>
+
+
+</style>
+
+</head>
+<body>
+
+  <div class="main_bar">
+    <div class="navi_bar">
+      <div class="logo">
+        <a href="./main_new2.html"><img src="https://i.postimg.cc/k5wy2fNP/Driving-mate-logo2-1.png" alt="" width="50"></a>
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a href="./index.html">전시소개</a></li>
+          <li><a href="./designer.html">졸업생</a></li>
+          <li><a href="./product.html">작품</a></li>
+        </ul>
+      </div>
+    </div>
+  
+    <div class="name_bar">
+      <ul class="content_box">
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="designers">
+    <div class="search_name">
+      <ul>
+        <li><a href="#">ALL</a></li>
+        <li><a href="#">ㄱㄴㄷㄹㅁ</a></li>
+        <li><a href="#">ㅂㅅㅇㅈ</a></li>
+        <li><a href="#">ㅊㅋㅌㅍㅎ</a></li>
+      </ul>
+    </div>
+
+    <div class="designers_profile">
+      <a href="./detail_01.html">
+        <div id="profile">
+          <div class="profile_img">
+            <img src="https://i.postimg.cc/J4HCXyFm/Kakao-Talk-20210607-234311583.jpg" alt="">
+          </div>
+          <div class="profile_namebox">
+            <p class="profile_name">신영준</p>
+          </div>
+        </div>
+      </a>
+      
+      <a href="./detail_02.html">
+        <div id="profile">
+          <div class="profile_img">
+            <img src="https://i.postimg.cc/mkQqdMWF/Kakao-Talk-20210130-111618043.jpg" alt="">
+          </div>
+          <div class="profile_namebox">
+            <p class="profile_name">전유미</p>
+          </div>
+        </div>
+      </a>
+      
+      <a href="./detail_01.html">
+        <div id="profile">
+          <div class="profile_img">
+            <img src="https://i.postimg.cc/1RksJcw4/Kakao-Talk-20210607-234337571.jpg" alt="">
+          </div>
+          <div class="profile_namebox">
+            <p class="profile_name">김하림</p>
+          </div>
+        </div>
+      </a>
+      
+      <a href="./detail_02.html">
+        <div id="profile">
+          <div class="profile_img">
+            <img src="https://i.postimg.cc/ZR2xJHn9/Kakao-Talk-20210604-180036103.jpg" alt="">
+          </div>
+          <div class="profile_namebox">
+            <p class="profile_name">마성진</p>
+          </div>
+        </div>
+      </a>
+      
+      <a href="./detail_02.html">
+        <div id="profile">
+          <div class="profile_img">
+            <img src="https://i.postimg.cc/DwJNQgpB/Kakao-Talk-20210608-003440540.jpg" alt="">
+          </div>
+          <div class="profile_namebox">
+            <p class="profile_name">이민행</p>
+          </div>
+        </div>
+      </a>
+      
+      <a href="./detail_01.html">
+        <div id="profile">
+          <div class="profile_img">
+            <img src="https://i.postimg.cc/cHwZDWDk/Kakao-Talk-20210608-003332580.jpg" alt="">
+          </div>
+          <div class="profile_namebox">
+            <p class="profile_name">이승은</p>
+          </div>
+        </div>
+      </a>
+      
+      <a href="./detail_01.html">
+        <div id="profile">
+          <div class="profile_img">
+            <img src="https://i.postimg.cc/DyFjGv24/Kakao-Talk-20210615-015016100.jpg" alt="">
+          </div>
+          <div class="profile_namebox">
+            <p class="profile_name">서정민</p>
+          </div>
+        </div>
+      </a>
+      
+      <a href="./detail_02.html">
+        <div id="profile">
+          <div class="profile_img">
+            <img src="https://i.postimg.cc/GtM3ncr7/Kakao-Talk-20210615-020022599.jpg" alt="">
+          </div>
+          <div class="profile_namebox">
+            <p class="profile_name">김지호</p>
+          </div>
+        </div>
+      </a>
+      
+      <a href="./detail_01.html">
+        <div id="profile">
+          <div class="profile_img">
+            <img src="https://i.postimg.cc/1RksJcw4/Kakao-Talk-20210607-234337571.jpg" alt="">
+          </div>
+          <div class="profile_namebox">
+            <p class="profile_name">김하림</p>
+          </div>
+        </div>
+      </a>
+      
+      <a href="./detail_02.html">
+        <div id="profile">
+          <div class="profile_img">
+            <img src="https://i.postimg.cc/ZR2xJHn9/Kakao-Talk-20210604-180036103.jpg" alt="">
+          </div>
+          <div class="profile_namebox">
+            <p class="profile_name">마성진</p>
+          </div>
+        </div>
+      </a>
+      
+      <a href="./detail_02.html">
+        <div id="profile">
+          <div class="profile_img">
+            <img src="https://i.postimg.cc/DwJNQgpB/Kakao-Talk-20210608-003440540.jpg" alt="">
+          </div>
+          <div class="profile_namebox">
+            <p class="profile_name">이민행</p>
+          </div>
+        </div>
+      </a>
+      
+      <a href="./detail_01.html">
+        <div id="profile">
+          <div class="profile_img">
+            <img src="https://i.postimg.cc/cHwZDWDk/Kakao-Talk-20210608-003332580.jpg" alt="">
+          </div>
+          <div class="profile_namebox">
+            <p class="profile_name">이승은</p>
+          </div>
+        </div>
+      </a>
+      
+      <a href="./detail_01.html">
+        <div id="profile">
+          <div class="profile_img">
+            <img src="https://i.postimg.cc/J4HCXyFm/Kakao-Talk-20210607-234311583.jpg" alt="">
+          </div>
+          <div class="profile_namebox">
+            <p class="profile_name">신영준</p>
+          </div>
+        </div>
+      </a>
+      
+      <a href="./detail_02.html">
+        <div id="profile">
+          <div class="profile_img">
+            <img src="https://i.postimg.cc/mkQqdMWF/Kakao-Talk-20210130-111618043.jpg" alt="">
+          </div>
+          <div class="profile_namebox">
+            <p class="profile_name">전유미</p>
+          </div>
+        </div>
+      </a>
+      
+      <a href="./detail_01.html">
+        <div id="profile">
+          <div class="profile_img">
+            <img src="https://i.postimg.cc/1RksJcw4/Kakao-Talk-20210607-234337571.jpg" alt="">
+          </div>
+          <div class="profile_namebox">
+            <p class="profile_name">김하림</p>
+          </div>
+        </div>
+      </a>
+      
+    </div>
+  </div>
+
+
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./index.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <title>Index</title>
+  <script language="javascript">
+    $(function () {
+      var $move_width = parseInt($('.name_bar .content').css('width'));
+      var $content_box = $('.name_bar .content_box');
+
+      function ani_1() {
+        animation()
+        setTimeout(ani_2, 1000 + 10);
+      };
+
+      function ani_2() {
+        animation()
+        setTimeout(ani_1, 1000 + 10);
+      };
+      ani_1();
+
+
+      function animation() {
+        $content_box.children().first()
+          .animate({
+            marginLeft: -$move_width
+          }, 2000, "linear", function () {
+            $(this).appendTo($(this).parent()).css({
+              marginLeft: 0
+            });
+          });
+      }
+      if (
+        $('.name_bar li').hover(function () {
+          $('.name_bar .content').stop();
+          $('.name_bar .content_box').stop();
+
+        }));
+    });
+  </script>
+</head>
+
+<body>
+
+  <div class="main_bar">
+    <div class="navi_bar">
+      <div class="logo">
+        <a href="./main_new2.html"><img src="https://i.postimg.cc/k5wy2fNP/Driving-mate-logo2-1.png" alt="" width="50"></a>
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a href="./index.html">전시소개</a></li>
+          <li><a href="./designer.html">졸업생</a></li>
+          <li><a href="./product.html">작품</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="name_bar">
+      <ul class="content_box">
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="main_contents_00">
+  </div>
+
+  <div class="artwork">
+
+  <div class="main_contents_01">
+    <div class="all">
+      <div class="text">
+        <h1>눈에 보이는 것<h1>
+        <h2>그보다<span style="color:#DF0900"> 더</span>  디자인하기 위해</h2>
+        <p class="p">FOR DESIGN MORE THAN IT LOOKS</p>
+        <p class="p_2">하나의 작품으로 사람들을 감동시키기 위해 예술가들은 숱한 시간을 고민하고 매달렸을 것입니다. </br>
+          우리의 디자인도 사람들을 감동시킬 준비가 되어 있습니다.</p>
+        <div class="box">
+          <div class="text_2">
+            <p class="serve"> To impress people with one work, artists would have thought and imagined for many hours.</br>
+              Our design is also ready to impress people.</p>
+          </div>
+          <div class="text_3">
+            <p class="serve_2">2021 KPU
+              <br>GRADUATE EXHIBITION<br>
+              DESIGN</p>
+          </div>
+        </div>
+        </div>
+    
+        <div class="exh_gnb_f">
+          <div id="face"><img src="https://i.postimg.cc/Wzj2h0rT/Mask-Group.jpg" height="197px" width="197px" alt=""></div>
+          <div id="face"><img src="https://i.postimg.cc/PrXSMNQx/Mask-Group-3.jpg" height="197px" width="197px" alt=""></div>
+          <div id="faced"><img src="https://i.postimg.cc/8c0w5mJ0/Mask-Group-6.jpg" height="197px" width="197px" alt=""></div>
+          <div id="face"><img src="https://i.postimg.cc/Sstc7NSX/Mask-Group-1.jpg" height="197px" width="197px" alt=""></div>
+          <div id="face"><img src="https://i.postimg.cc/8zDtt4QL/Mask-Group-4.jpg" height="197px" width="197px" alt=""></div>
+          <div id="faced"><img src="https://i.postimg.cc/ZR1L3FxB/Mask-Group-7.jpg" height="197px" width="197px" alt=""></div>
+          <div id="face"><img src="https://i.postimg.cc/Sstc7NSX/Mask-Group-1.jpg" height="197px" width="197px" alt=""></div>
+          <div id="face"><img src="https://i.postimg.cc/HstQsCR7/Mask-Group-5.jpg" height="197px" width="197px" alt=""></div>
+          <div id="faced"><img src="https://i.postimg.cc/ZR1L3FxB/Mask-Group-7.jpg" height="197px" width="197px" alt=""></div>
+        </div>
+    
+        <div class="second">
+          
+          <div class="sectext">
+          <h1>여러 <span style="color:#DF0900">색</span>으로 덮힌 우리</h1>
+          <p>여러 색깔을 섞고 섞어,<br>우리는 우리만의 색을 가지게 되었습니다.<br>
+          </p>
+          </div>
+    
+          <div class="gif">
+            
+          </div>
+          
+        </div>
+    
+        <div class="project">
+        <div class="exh_gnb_g"><video class="welcome"src="./img/insertcd.mp4" muted loop autoplay>
+          이 문장은 여러분의 브라우저가 video 태그를 지원하지 않을 때 화면에 표시됩니다!</video></div>
+        <div class="extext">
+          지금, 우리의 디자인을 재생하세요.
+        </div>
+        <div class="info">
+          <a href="#">작품 보러가기</a>
+        </div>
+       <div class="project_2">
+        <div class="exh_gnb_h">
+         <a href="https://portal.kpu.ac.kr/portal/default/stu"> <img src="./img/kpu.png"></a>
+        </div> 
+        </div>
+        </div>  
+  </div>
+
+
+
+</body>
+
+</html>

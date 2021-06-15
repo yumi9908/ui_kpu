@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./detail_01.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+  <title>detail_01</title>
+ 
+  <script language="javascript">
+    $(function(){    
+    var $move_width = parseInt( $('.name_bar .content').css('width') );   
+    var $content_box = $('.name_bar .content_box');                       
+     
+    function ani_1(){
+        animation()                         
+        setTimeout( ani_2, 1000 + 10 );     
+    };                                      
+    function ani_2(){
+        animation()
+        setTimeout( ani_1, 1000 + 10);     
+    };
+    ani_1();                                
+      
+
+    function animation(){
+        $content_box.children().first()
+        .animate({ marginLeft : - $move_width }, 2000, "linear", function (){
+            $(this).appendTo( $(this).parent() ).css({ marginLeft : 0});
+        });     
+    }
+    if(
+        $('.name_bar li').hover(function(){
+        $('.name_bar .content').stop();
+        $('.name_bar .content_box').stop();
+    
+    }) );
+
+});
+
+$('.content_nav a').on('click', function(event) {
+    $(this).parent().find('a').removeClass('active');
+    $(this).addClass('active');
+});
+
+$(window).on('scroll', function() {
+    $('.detail_target').each(function() {
+        if($(window).scrollTop() >= $(this).offset().top) {
+            var id = $(this).attr('id');
+            $('.content_nav a').removeClass('active');
+            $('.content_nav a[href=#'+ id +']').addClass('active');
+            $('.content_nav a').css("color","#fff");
+        }
+    });
+});
+
+$( document ).ready( function() {
+        var Offset = $( '.content_nav' ).offset();
+        $( window ).scroll( function() {
+          
+          if ( $( document ).scrollTop() > Offset.top ) {
+            $( '.content_nav' ).addClass( 'detail_fixed' );
+            $('.name_bar').slideUp();
+          }
+          else {
+            $( '.content_nav' ).removeClass( 'detail_fixed' );
+            $('.name_bar').slideDown();
+          }
+        });
+      } );
+
+      function j_test(n){
+        $('html, body').stop().animate({
+            scrollTop : $('.profile_btn').eq(n).offset().top
+        });
+    }
+
+    // $('button').click(function(){
+    //   $('.flower').show();
+    // })
+
+    $(function(){
+  $('.profile_btn').click(function(){ 
+      $('.flower1').show().css('-webkit-animation-name','flower1');
+      $('.flower2').show().css('-webkit-animation-name','flower2');
+      $('.flower3').show().css('-webkit-animation-name','flower3');
+      $('.flower4').show().css('-webkit-animation-name','flower4');
+      $('.flower5').show().css('-webkit-animation-name','flower5');
+      $('.flower6').show().css('-webkit-animation-name','flower6');
+      $('.flower7').show().css('-webkit-animation-name','flower7');
+      $('.flower8').show().css('-webkit-animation-name','flower8');
+      $('.done').show().css('-webkit-animation-name','done');
+      // $('.done').fadeIn(500);
+      // $('.done').animate();
+  });
+});
+
+
+
+
+
+
+// $( 'html, body' ).stop().animate( { scrollTop : 100 } )  
+// $( 'html, body' ).stop().animate( { scrollTop : 300 } )   
+// $( 'html, body' ).stop().animate( { scrollTop : 900 } )  
+
+
+</script>
+
+</head>
+<body>
+
+  <div class="main_bar">
+    <div class="navi_bar">
+      <div class="logo">
+        <a href="./main_new2.html"><img src="https://i.postimg.cc/k5wy2fNP/Driving-mate-logo2-1.png" alt="" width="50"></a>
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a href="./index.html">전시소개</a></li>
+          <li><a href="./designer.html">졸업생</a></li>
+          <li><a href="./product.html">작품</a></li>
+        </ul>
+      </div>
+    </div>
+  
+    <div class="name_bar">
+      <ul class="content_box">
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+        <li class="content"><a href="#">KIM HA-RIM</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="done" style="display: none;">꽃다발을 전달했어요!</div>
+
+  <button type="button" onclick="j_test(0)" class="comment">
+    <i class="fas fa-chevron-down"></i>
+    <p class="comment_p">응원하러 가기</p>
+  </button>
+
+  <div class="detail_contents">
+    <div class="content_01">
+      <h3>HOW ARE U?</h3>
+      <!-- 대표이미지넣을부분 -->
+    </div>
+
+
+    <div class="content_nav_fix">
+      <div class="content_nav">
+        <div class="menu_bar">
+          <div class="bar_01"></div>
+          <div class="bar_02"></div>
+        </div>
+        <div><button type="button" onclick="$('html, body').stop().animate( { scrollTop : 1100 } ); ">video </button></div>
+        <div><button type="button" onclick="$('html, body').stop().animate( { scrollTop : 2050 } ); ">process</button></div>
+        <div><button type="button" onclick="$('html, body').stop().animate( { scrollTop : 2950 } ); ">designer</button></div>
+      </div>
+    </div>
+
+  <div class="ment">
+    <h1>HOW ARE U?</h1>
+    <p>이 과가 내 과가 맞나? 대학생들의 진학 후 중도탈락,<br>내가 진짜 원하는 학과를 알아보자! 대학 진학 서포트 어플리케이션</p>    
+  </div>
+
+  <div class="detail_target" id="1">
+    <div class="video">
+      <!-- 비디오넣을부분 -->
+      <div class="video_source">
+        <h2>VIDEO</h2>
+        <video src="./img/howareu.mp4" muted loop autoplay></video>
+      </div> <!--이건 지워도 됨-->
+    </div>
+  </div>
+
+ <!-- 어플 가로 슬라이드 넣을 부분 -->
+ <div class="detail_target" id="2" >
+    <div class="scroll_img">
+
+      <h2>PROCESS</h2>
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">ㅣ
+        
+    
+        <div class="carousel-inner">
+          <div class="carousel-item item1 active">
+          </div>
+          <div class="carousel-item item2">
+          </div>
+          <div class="carousel-item item3">
+          </div>
+          <div class="carousel-item item4">
+          </div>
+          <div class="carousel-item item5">
+          </div>
+          <div class="carousel-item item6">
+          </div>
+          <div class="carousel-item item7">
+          </div>
+          <div class="carousel-item item8">
+          </div>
+          <div class="carousel-item item9">
+          </div>
+          <div class="carousel-item item10">
+          </div>
+          <div class="carousel-item item11">
+          </div>
+          <div class="carousel-item item12">
+          </div>
+          <div class="carousel-item item13">
+          </div>
+          <div class="carousel-item item14">
+          </div>
+         
+          
+        </div>
+    
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      
+    </div>
+    
+      
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </div>
+<div class="detail_target"  id="3">
+    <div class="visitor">
+      <h2>Visitor's Book</h2>
+
+      <div class="profile">
+        <img src="https://i.postimg.cc/B6tSNrZm/A.jpg" alt="">
+        <div class="designer_profile">
+          <div class="designer_name">전유미</div>
+          <div class="project_name">How are U? - 대학진학어플리케이션</div>
+        </div>
+        <div class="flowers">
+          <div class="flower1" style="display: none;"></div>
+          <div class="flower2"  style="display: none;"></div>
+          <div class="flower3"  style="display: none;"></div>
+          <div class="flower4"  style="display: none;"></div>
+          <div class="flower5"  style="display: none;"></div>
+          <div class="flower6"  style="display: none;"></div>
+          <div class="flower7"  style="display: none;"></div>
+          <div class="flower8"  style="display: none;"></div>
+        </div>
+        <button class="profile_btn">꽃다발 주기 </button>
+      </div>
+
+      <div class="send">
+        <input type="text" class="input_name" placeholder="your name"> </br>
+        <input type="text" class="input_comment" placeholder="comments"> <br>
+        <button class="send">SEND IT</button>
+      </div>
+
+      <div class="comments">
+        <div class="comment_dummy">
+          <div class="com_bx"><p class="vi_name">김한빈</p>
+          <p class="vi_date">2021-04-24</p> </div>
+          <p>헐 너무 디테일하게 잘 하셨어요 ~ 재밌게 잘 보고 갑니다 ~</p>
+        </div>
+        <div class="comment_dummy">
+          <div class="com_bx"><p class="vi_name">김진환</p>
+          <p class="vi_date">2021-04-24</p> </div>
+          <p>헐 너무 디테일하게 잘 하셨어요 ~ 재밌게 잘 보고 갑니다 ~</p>
+        </div>
+        <div class="comment_dummy">
+          <div class="com_bx"><p class="vi_name">김지원</p>
+          <p class="vi_date">2021-04-24</p> </div>
+          <p>헐 너무 디테일하게 잘 하셨어요 ~ 재밌게 잘 보고 갑니다 ~</p>
+        </div>
+        <div class="comment_dummy">
+          <div class="com_bx"><p class="vi_name">구준회</p>
+          <p class="vi_date">2021-04-24</p> </div>
+          <p>헐 너무 디테일하게 잘 하셨어요 ~ 재밌게 잘 보고 갑니다 ~</p>
+        </div>
+      </div>
+
+      <div class="sns">
+        <ul>
+          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>
